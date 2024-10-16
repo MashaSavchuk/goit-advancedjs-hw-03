@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+    color: #2E2F42;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+.content {
+    margin: 24px 156px;
+    width: 1128px;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    margin-bottom: 0;
+    border: 1px solid #808080;
+    width: 360px;
+    height: auto;
+}
+
+.gallery-image {
+    margin: 0;
+    width: 360px;
+    height: 200px;
+}
+
+.gallery-descr {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.gallery-descr>div {
+    text-align: center;
+    line-height: 24px;
+}
+
+.gallery-descr>div>span {
+    display: block;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.gallery-wrapper {
+    background-color: #2E2F42;
+    color: #FFF;
+}
+
+.gallery-wrapper .sl-close,
+.gallery-wrapper .sl-counter,
+.gallery-wrapper .sl-navigation button {
+    color: #FFF;
+}
+
+.search {
+    width: 100%;
+    text-align: center;
+}
+
+.search-form {
+    margin: 28px;
+    font-size: 16px;
+}
+
+.search-form input {
+    width: 272px;
+    height: 40px;
+    padding: 8px 16px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+}
+
+.search-form inout::placeholder {
+    color: #808080;
+}
+
+.search-form input:hover {
+    border-color: #000;
+}
+
+.search-form input:focus {
+    color: #2E2F42;
+    border: 1px solid #4E75FF;
+}
+
+.search-form button {
+    width: 91px;
+    height: 40px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #4E75FF;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.search-form button:hover {
+    background-color: #6C8CFF;
+}
+
+/* Стилі для індикатора завантаження */
+.loader {
+    display: none;
+    /* За замовчуванням не відображається */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader.is-loading {
+    display: block;
+    /* Показуємо індикатор завантаження під час завантаження */
+}
